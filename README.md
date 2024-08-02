@@ -75,14 +75,15 @@ candidates.
 ## What's Next for Implementation
 1. Data manipulation & security concern about voting records.
 2. ML based model creation for predicting voting result.
-3. Data intelligence.
+3. Data intelligence etc.
+4. User Real-time comments.
 
 
 ## Missing Features 
  Add on if missing
  
  
-## Abnornal Actions Reports
+## Abnormal Actions Reports
  Add on if any application related issues raised.
 
 
