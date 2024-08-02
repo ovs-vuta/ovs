@@ -1,6 +1,12 @@
 # Online Voting System - VUTA
 The Online Voting System Web Application for university premises is a secure and efficient platform designed to facilitate the electoral process within academic institutions.
 
+## Institute
+ - Vidyasagar University, West Bengal, Medinipur
+
+## Type
+ - MCA final Year Project
+   
 ## Technologies
 - [React](https://react.dev/) - frontend
 - [Mysql](https://www.mysqltutorial.org/) with [Sequelize ORM](https://sequelize.org/docs/v6/getting-started/) - Database 
@@ -85,9 +91,6 @@ candidates.
  
 ## Abnormal Actions Reports
  Add on if any application related issues raised.
-
-
-
 
 
 
