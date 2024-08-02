@@ -46,7 +46,8 @@ Create **Root folder** as `OVS` & inside this folder add two **sub-folder** as `
 
 ### 1. **Admin Section**: 
 - **Login**: The presiding officer (admin) needs to log in securely 
-to access the admin panel. 
+to access the admin panel.
+- **Register Users**: Admin can add users uploading a single .CSV file
 - **Candidate Management**: Admins can add candidates who are 
 running for the Executive Committee and Office Bearer 
 positions. 
