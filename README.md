@@ -34,13 +34,13 @@ Create **Root folder** as `OVS` & inside this folder add two **sub-folder** as `
 4. Next, ` F:\>mkdir OVS (enter)` & ` F:\>cd OVS (enter)` 
 5. Next, ` F:\OVS>git clone https://github.com/ovs-vuta/ovs.git`
 6. after doing this type : ` F:\OVS>dir` it show ```server & ovs-app``` two sub-directories.
-7. Next, go to: ` F:\OVs>cd server` and type: ` F:\OVs\server>npm install`
-8. Next, go to: ` F:\OVs>cd ovs-app` and type: ` F:\OVs\ovs-app>npm install`
+7. Next, go to: ` F:\OVS>cd server` and type: ` F:\OVS\server>npm install`
+8. Next, go to: ` F:\OVS>cd ovs-app` and type: ` F:\OVS\ovs-app>npm install`
 
 ### - Run
  1. First open `Xampp` > go to  `Xampp Control Panel` > start `apache` & `mysql` until `start` button color is green. 
- 2. ` F:\OVs\server>nodemon` and Enter
- 3. ` F:\OVs\ovs-app>npm run dev` and Enter
+ 2. ` F:\OVS\server>nodemon` and Enter
+ 3. ` F:\OVS\ovs-app>npm run dev` and Enter
  
 ## Features & Application:
 
