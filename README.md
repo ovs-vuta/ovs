@@ -31,7 +31,7 @@ Create **Root folder** as `OVS` & inside this folder add two **sub-folder** as `
 1. Ensure that your system has been already installed with `nodejs LTS` version &  `git`.
 2. Select your directory where you wants to create your project : `open cmd`.
 3. Choose directory and type this on `cmd` :` F:\>node -v` it show the latest version.
-4. Next, ` F:\>mkdir OVS (enter)` & ` F:\>cd OVS (enter)` 
+4. Next, ` F:\>mkdir OVS` & ` F:\>cd OVS` 
 5. Next, ` F:\OVS>git clone https://github.com/ovs-vuta/ovs.git`
 6. after doing this type : ` F:\OVS>dir` it show ```server & ovs-app``` two sub-directories.
 7. Next, go to: ` F:\OVS>cd server` and type: ` F:\OVS\server>npm install`
