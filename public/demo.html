@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>Demo Site - Devjyoti</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* ==================================== utils ========================*/
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid #16365D;
+        }
+
+        .btn-end {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .mt-2 {
+            margin-top: 1rem;
+        }
+
+        ::placeholder {
+            color: #ccc;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* ======================================== STYLES  ================================================== */
+        /* ================================================================================================== */
+        .edu_header {
+            background-color: #16365D;
+            padding-top: 5px;
+
+            & h2 {
+                padding-top: 8px;
+                text-align: center;
+                color: #ccc;
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+
+            & input {
+                width: 50%;
+                padding: 8px;
+                border: 1px solid #16365D;
+                border-radius: 5px;
+            }
+        }
+
+        .button {
+            background-color: #16365D;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="edu-qualif container">
+            <div class="edu_header">
+                <h2>EDUCATIONAL QUALIFICATION</h2>
+            </div>
+            <div class="add-more btn-end">
+                <button class="button" onclick="addRow()">Add More</button>
+            </div>
+            <table id="myTable">
+                <tr>
+                    <th>SL No</th>
+                    <th>Exam Name</th>
+                    <th>Year of Passing</th>
+                    <th>Institution Name</th>
+                    <th>Marks Obtain</th>
+                    <th>Out of</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <input type="text" id="examName1" name="examName1" placeholder="Exam Name">
+                        <div class="error" id="errorExamName1"></div>
+                    </td>
+                    <td>
+                        <input type="text" id="yearOfPassing1" name="yearOfPassing1" placeholder="Year of Pass">
+                        <div class="error" id="errorYearOfPassing1"></div>
+                    </td>
+                    <td>
+                        <input type="text" id="institutionName1" name="institutionName1" placeholder="Institution">
+                        <div class="error" id="errorInstitutionName1"></div>
+                    </td>
+                    <td>
+                        <input type="text" id="marksObtain1" name="marksObtain1" placeholder="Marks">
+                        <div class="error" id="errorMarksObtain1"></div>
+                    </td>
+                    <td>
+                        <input type="text" id="outOf1" name="outOf1" placeholder="Out of">
+                        <div class="error" id="errorOutOf1"></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-end mt-2">
+                <button class="button" onclick="submitForm()">Submit</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        var rowCount = 2;
+
+        function addRow() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(rowCount);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+
+            cell1.innerHTML = rowCount;
+            cell2.innerHTML = '<input type="text" placeholder="Exam Name" id="examName' + rowCount + '" name="examName' + rowCount + '"><div class="error" id="errorExamName' + rowCount + '"></div>';
+            cell3.innerHTML = '<input type="text" placeholder="Year of Pass" id="yearOfPassing' + rowCount + '" name="yearOfPassing' + rowCount + '"><div class="error" id="errorYearOfPassing' + rowCount + '"></div>';
+            cell4.innerHTML = '<input type="text" placeholder="Institution" id="institutionName' + rowCount + '" name="institutionName' + rowCount + '"><div class="error" id="errorInstitutionName' + rowCount + '"></div>';
+            cell5.innerHTML = '<input type="text" placeholder="Marks" id="marksObtain' + rowCount + '" name="marksObtain' + rowCount + '"><div class="error" id="errorMarksObtain' + rowCount + '"></div>';
+            cell6.innerHTML = '<input type="text" placeholder="Out of" id="outOf' + rowCount + '" name="outOf' + rowCount + '"><div class="error" id="errorOutOf' + rowCount + '"></div>';
+            rowCount++;
+        }
+
+        function submitForm() {
+            let isValid = true;
+
+            for (let i = 1; i < rowCount; i++) {
+                const examName = document.getElementById('examName' + i).value.trim();
+                const yearOfPassing = document.getElementById('yearOfPassing' + i).value.trim();
+                const institutionName = document.getElementById('institutionName' + i).value.trim();
+                const marksObtain = document.getElementById('marksObtain' + i).value.trim();
+                const outOf = document.getElementById('outOf' + i).value.trim();
+
+                // Exam Name validation
+                if (!/^[A-Za-z\s]+$/.test(examName)) {
+                    document.getElementById('errorExamName' + i).textContent = "Please enter a valid Exam Name (alphabets and spaces only)";
+                    isValid = false;
+                } else {
+                    document.getElementById('errorExamName' + i).textContent = "";
+                }
+
+                // Year of Passing validation
+                if (!/^\d+$/.test(yearOfPassing)) {
+                    document.getElementById('errorYearOfPassing' + i).textContent = "Please enter a valid Year of Passing (numbers only)";
+                    isValid = false;
+                } else {
+                    document.getElementById('errorYearOfPassing' + i).textContent = "";
+                }
+
+                // Institution Name validation
+                if (!/^[A-Za-z\s]+$/.test(institutionName)) {
+                    document.getElementById('errorInstitutionName' + i).textContent = "Please enter a valid Institution Name (alphabets and spaces only)";
+                    isValid = false;
+                } else {
+                    document.getElementById('errorInstitutionName' + i).textContent = "";
+                }
+
+                // Marks Obtain validation
+                if (!/^\d+$/.test(marksObtain)) {
+                    document.getElementById('errorMarksObtain' + i).textContent = "Please enter valid Marks Obtained (numbers only)";
+                    isValid = false;
+                } else {
+                    document.getElementById('errorMarksObtain' + i).textContent = "";
+                }
+
+                // Out Of validation
+                if (!/^\d+$/.test(outOf)) {
+                    document.getElementById('errorOutOf' + i).textContent = "Please enter a valid value for 'Out of' (numbers only)";
+                    isValid = false;
+                } else {
+                    document.getElementById('errorOutOf' + i).textContent = "";
+                }
+            }
+
+            if (isValid) {
+                console.log("Form submitted successfully");
+                // Add form submission logic here
+            } else {
+                console.log("Form contains errors");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
