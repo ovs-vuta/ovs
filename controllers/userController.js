@@ -8,6 +8,7 @@ const ECCModel = require("../models/ECCModel");
 const ECCVotersModel = require("../models/ECCVotersModel");
 const { jsonToXlsx } = require("../utils/jsonToXlsx");
 
+// handle for user
 const addSingleUser = async (req, res) => {
   try {
     const { voterId, name, email } = req.body;
