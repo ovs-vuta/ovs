@@ -5,7 +5,7 @@ The Online Voting System Web Application for university premises is a secure and
  - Vidyasagar University, West Bengal, Medinipur
 
 ## Type
- - MCA final Year Project
+ - MCA final Year Project 2024
    
 ## Technologies
 - [React](https://react.dev/) - frontend
