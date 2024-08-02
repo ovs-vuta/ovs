@@ -78,12 +78,11 @@ vote for their preferred ones.
 -  **Executive Committee**: Users must vote for a minimum of eight 
 candidates. 
 
-
 ## What's Next for Implementation
 1. Data manipulation & security concern about voting records.
 2. ML based model creation for predicting voting result.
 3. Data intelligence etc.
-4. User Real-time comments.
+4. Voters Real-time comment.
 
 
 ## Missing Features 
