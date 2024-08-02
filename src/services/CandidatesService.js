@@ -9,6 +9,7 @@ export default function getObcData() {
   };
 }
 
+// common function for grouped object
 export function groupedCndData(candidates) {
   const groupedData = candidates.reduce((acc, candidate) => {
     const { candidateType } = candidate;
