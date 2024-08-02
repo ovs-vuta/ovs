@@ -1,0 +1,37 @@
+.dashboard-container {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ede8f5;
+  border-radius: 5px;
+  border-top: 5px solid #3d52a0;
+  &:first-child {
+    padding-top: 0rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.profile-logo {
+  height: 60px;
+  /* border: 1px solid; */
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 2px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgb(204, 186, 186) !important;
+}
+
+.dropdown-menu .dropdown-item {
+  cursor: pointer;
+}
+.profile-container {
+  width: 100%;
+  background-color: #e5b2ef;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  &:first-child {
+    margin-top: 0;
+  }
+}

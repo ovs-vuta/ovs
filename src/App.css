@@ -1,0 +1,294 @@
+.hero-header {
+  backdrop-filter: blur(3px) saturate(196%);
+  -webkit-backdrop-filter: blur(2px) saturate(196%);
+  background-color: rgba(17, 25, 40, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0 0 2px #e81cff;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-container .card {
+  width: 50%;
+  min-height: 325px;
+  color: #eee;
+  background-color: #54ff4c0d !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgb(37, 246, 34) !important;
+  box-shadow: 0 0 0.25em rgb(37, 246, 34);
+  & .card-body {
+    color: #eee;
+    & .hero-form {
+      & .form-group {
+        & label {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}
+.hero-center-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container {
+  width: 100vw;
+  background: #f3faeb;
+  height: 80vh;
+  position: relative;
+  z-index: 11;
+  overflow: auto;
+  outline: 4px solid #2e80f3;
+  box-shadow: 0 0 5px #fbf5f5;
+}
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: center; */
+  background-color: #06030c;
+  position: relative;
+  z-index: 999;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    z-index: 333;
+    border-top: 4px solid #e81cff;
+    border-left: 4px solid #e81cff;
+    pointer-events: none;
+    filter: blur(0.58px);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transform: translate(-50%,-50%); */
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    z-index: 333;
+    border-bottom: 4px solid #00dbde;
+    border-right: 4px solid #00dbde;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: blur(0.58px);
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  &:hover::before,
+  &:hover::after {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    transform: translate(0%, 0%);
+    filter: blur(0px);
+  }
+  & .hero-sidebar-header {
+    width: 100%;
+  }
+  & > div {
+    cursor: pointer;
+    border: 0.0125px solid #0a2021;
+    border-radius: 0.25rem;
+    & p {
+      color: #2ef36e;
+      font-size: 1.25rem;
+    }
+  }
+
+  & nav li > div {
+    margin: 0.85rem 0rem;
+    padding: 0.3rem 0.25rem; 
+    border: 0.0125px solid #0a2021;
+    border-radius: 2px;
+    & a {
+      display: block;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .5rem;
+      text-align: left;
+      width: 100%;
+      color: #c7eed4;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.25rem;
+      transition: all 0.2s ease-in;
+      /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+      &:hover {
+        background-color: #0a2021;
+        transition: all 0.2s ease-in;
+      }
+    }
+  }
+  & .hero_logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5rem;
+    width: 100%;
+    & button{
+      width: 70%;
+      
+    }
+  }
+}
+
+.bg-light-green {
+  background-color: #0a2021;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.text-green-700 {
+  color: #52d27a !important;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* voter styles */
+
+.hero-voter_main {
+  background-color: #fbf5f5;
+  min-height: 100vh;
+
+  & .hero-voter_header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    transition: all 0.2s ease-in-out;
+  }
+  & .hero-voter_banner {
+    position: relative;
+    min-height: 450px;
+    width: 100%;
+    background: url("./assets/banner1.png") rgb(6, 2, 21);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 43%,
+      100% 91%,
+      69% 98%,
+      31% 99%,
+      0 87%,
+      0% 43%,
+      0 0
+    );
+    transition: all 0.2s ease;
+
+    & .logo {
+      position: absolute;
+      bottom: -40%;
+      right: 5%;
+      transform: translateY(-50%);
+      & img {
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+        filter: drop-shadow(0 0 0.025rem rgb(242, 244, 246));
+      }
+    }
+  }
+
+  .hero-voter_services {
+    padding: 1rem;
+    position: relative;
+    /* z-index: 111; */
+    transition: all 0.2s linear;
+  }
+
+  & .service-card {
+    border-radius: 0.25rem;
+    height: auto;
+    min-height: 25vh;
+    padding-bottom: 1rem;
+
+    & .service-header {
+      width: 100%;
+      height: 44px;
+      background: #20217b;
+      padding: 2px 0.5rem;
+      border-radius: 0.25rem 0.25rem 0 0;
+      color: #fff;
+    }
+
+    & .sm-card {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      min-height: 150px;
+      border-radius: 0.25rem;
+      background: #cbf7cd;
+      flex: 1 0 200px;
+
+      & .sm-card-body {
+        & .sm-card-body-icon {
+          text-align: center;
+          width: 55px;
+          height: 55px;
+          background-color: #6b91ef;
+          border-radius: 50%;
+          padding: 5px;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/* PROFILE STYLES */
+.usr-profile {
+  position: relative;
+  & .card {
+    pointer-events: none;
+    position: absolute;
+    right: 15%;
+    background: #0a2021;
+    color: #c7eed4;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    & .card-header {
+      color: #f9b033;
+    }
+    & .card-body {
+      & h5 {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+
+/* media query */
+@media (max-width: 961px) {
+  .vote-cnd-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 468px) {
+  .hero-voter_main {
+    & .hero-voter_banner {
+      min-height: 300px;
+    }
+  }
+}
